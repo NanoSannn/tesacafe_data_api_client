@@ -1,0 +1,29 @@
+<div class="box-add container mt-4 p-5 w-50">
+    <h1>Add Items</h1>
+    <hr class="mb-4">
+    <form [formGroup]="SalesForm">
+        <div class="mb-3">
+            <label class="form-label">DrinkName</label>
+            <select class="form-select" formControlName="drinkName" >
+                <!-- <option selected value="#"></option> -->
+                <option *ngFor= "let d of drink" value="{{ d.name }}">{{ d.name }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DrinkType</label>
+            <select class="form-select" formControlName="drinkType">
+                <option selected value="Hot">Hot</option>
+                <option value="cool">cool</option>
+                <option value="blended">blended</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="text" class="form-control" required formControlName="price" placeholder="20 baht">
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <button type="button" (click)="addItems(id)" class=" btn-info">Save</button>
+        </div>
+    </form>
+</div>

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serviceUrl: "https://tesacafe-data-api-server.herokuapp.com"
+  // serviceUrl: "http://localhost:4000"
 };
 
 /*

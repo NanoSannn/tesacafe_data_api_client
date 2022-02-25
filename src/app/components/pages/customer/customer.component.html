@@ -1,0 +1,49 @@
+<div class="row mt-3">
+    <div class="col-md-12" style="text-align: right;">
+        <a routerLink="/customer/addcustomer" class="btn btn-success">Add New Customer</a>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="h1">All Customer</div>
+    <div class="input-group my-3" [formGroup]="searchForm">
+        <input type="text" class="form-control" placeholder="Customer Name" formControlName="searchName" />
+        <button class="input-group-text btn btn-primary" (click)="searchName()">Search</button>
+    </div>
+    <div class="col-md-12 mt-2">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>tel_phone</th>
+                    <th>favoriteDrinks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let b of customer; let i = index">
+                    <td>{{ i+1 }}</td>
+                    <td>{{ b.name }}</td>
+                    <td>{{ b.email }}</td>
+                    <td>{{ b.tel_phone }}</td>
+                    <td >
+                        <p *ngFor = "let fd of b.favoriteDrinks">
+                            {{ fd.drinkName }}{{ fd.drinkType }}
+                        </p><hr>
+                    </td>
+                    <td>
+                        <a class="btn btn-info btn-sm" routerLink="/customer/{{ b._id }}">
+                            FavoriteDrinks
+                        </a> &nbsp;
+                        <a class="btn btn-info btn-sm" routerLink="/customer/edit/{{ b._id }}">
+                            Edit
+                        </a> &nbsp;
+                        <a class="btn btn-danger btn-sm" (click)="deleteCustomer(b._id)">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

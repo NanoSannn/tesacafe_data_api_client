@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.box-add{
+    color: white;
+}
+body{
+    background-image: url('https://images.wallpaperscraft.com/image/single/cafe_sign_signboard_116510_1920x1080.jpg');
+}

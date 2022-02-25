@@ -1,0 +1,30 @@
+<div class="box-add container mt-4 p-5 w-50">
+    <h1>Add Drink</h1>
+    <hr class="mb-4">
+    <form [formGroup]="DrinkForm">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" required formControlName="name" placeholder="Name Drink">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">image</label>
+            <input type="text" class="form-control" required formControlName="img" placeholder="Url image">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Type</label>
+            <select class="form-select" formControlName="drinkTy">
+                <option selected value="Hot">Hot</option>
+                <option value="cool">cool</option>
+                <option value="blended">blended</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="text" class="form-control" required formControlName="price" placeholder="20 baht">
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <button type="button" (click)="addDrink()" class=" btn-info">Save</button>
+        </div>
+    </form>
+</div>

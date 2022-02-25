@@ -1,0 +1,27 @@
+<div class="box-add container mt-4 p-5 w-50">
+    <h1>register</h1>
+    <hr class="mb-4">
+    <form [formGroup]="registerForm">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" required formControlName="name" placeholder="xxxxxxxxx">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" required formControlName="email" placeholder="aaaa@xxx.com">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">phone_number</label>
+            <input type="text" class="form-control" required formControlName="phone_number" placeholder="0999999999">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">password</label>
+            <input type="text" class="form-control" required formControlName="password" placeholder="Your Password">
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <button type="button" (click)="register()" class=" btn-info">Save</button>
+        </div>
+    </form>
+    
+</div>

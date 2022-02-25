@@ -1,0 +1,23 @@
+
+<div class="box-add container mt-4 p-5 w-50" >
+    <h1>Add Customer</h1>
+    <hr class="mb-4">
+    <form [formGroup]="CustomerForm">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" required formControlName="name" placeholder="Name You">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" required formControlName="email" placeholder="aaaa@xxx.com">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tel_phone</label>
+            <input type="text" class="form-control" required formControlName="tel_phone" placeholder="0999999999">
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <button type="button" (click)="addCustomer()" class=" btn-info">Save</button>
+        </div>
+    </form>
+</div>

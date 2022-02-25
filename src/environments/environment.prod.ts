@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serviceUrl: "https://tesacafe-data-api-server.herokuapp.com"
 };

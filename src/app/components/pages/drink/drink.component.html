@@ -1,0 +1,42 @@
+<div class="row mt-3">
+    <div class="col-md-12" style="text-align: right;">
+        <a routerLink="/drink/adddrink" class="btn btn-success">Add New Drink</a>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="h1">All Drink</div>
+    <div class="input-group my-3" [formGroup]="searchForm">
+        <input type="text" class="form-control" placeholder="Drink Name" formControlName="searchName" />
+        <button class="input-group-text btn btn-primary" (click)="searchName()">Search</button>
+    </div>
+    <div class="col-md-12 mt-2" align="center">
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>DrinkName</th>
+                    <th>Type</th>
+                    <th>price</th>
+                    <th>image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let b of drink; let i = index">
+                    <td>{{ i+1 }}</td>
+                    <td>{{ b.name }}</td>
+                    <td>{{ b.drinkTy }}</td>
+                    <td>{{ b.price }}</td>
+                    <td width="30%" height="15%"><img [src]="b.img" width="20%" height="15%" ></td>
+                    <td>
+                        <a class="btn btn-info btn-sm" routerLink="/drink/edit/{{ b._id }}">
+                            Edit
+                        </a> &nbsp;
+                        <a class="btn btn-danger btn-sm" (click)="deleteDrink(b._id)">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

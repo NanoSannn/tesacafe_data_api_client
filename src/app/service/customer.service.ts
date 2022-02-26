@@ -53,4 +53,10 @@ export class CustomerService {
     let getUrl = `${this.url}/${_id}`;
     return this.http.delete<any>(getUrl);
   }
+
+  deleteFavoriteDrinks(_id: any){
+    let getUrl = `${this.url}/fd/${_id}`;
+    console.log(getUrl);
+    return this.http.delete<any>(getUrl);
+  }
 }

@@ -50,7 +50,7 @@ export class SalesService {
   }
 
   deleteSales(_id: any){
-    let getUrl = `${this.url}/${_id}`;
+    let getUrl = `${this.url}/items/${_id}`;
     return this.http.delete<any>(getUrl);
   }
 }

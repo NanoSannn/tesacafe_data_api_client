@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  serviceUrl: "https://tesacafe-data-api-server.herokuapp.com"
-  // serviceUrl: "http://localhost:4000"
+  // serviceUrl: "https://tesacafe-data-api-server.herokuapp.com"
+  serviceUrl: "http://localhost:4000"
 };
 
 /*

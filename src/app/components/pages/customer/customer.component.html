@@ -26,10 +26,13 @@
                     <td>{{ b.name }}</td>
                     <td>{{ b.email }}</td>
                     <td>{{ b.tel_phone }}</td>
-                    <td >
-                        <p *ngFor = "let fd of b.favoriteDrinks">
+                    <td *ngFor = "let fd of b.favoriteDrinks">
+                        <p >
                             {{ fd.drinkName }}{{ fd.drinkType }}
-                        </p><hr>
+                        </p>
+                        <a class="btn btn-info btn-sm" (click)="deleteFavoriteDrinks(fd._id)">
+                            DeleteFavorite
+                        </a> 
                     </td>
                     <td>
                         <a class="btn btn-info btn-sm" routerLink="/customer/{{ b._id }}">

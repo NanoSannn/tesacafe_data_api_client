@@ -39,10 +39,10 @@ export class CustomerComponent implements OnInit {
       });
     }
   }
-  deleteFavoriteDrinks(_id:any){
-    console.log(_id)
+  deleteFavoriteDrinks(id:any){
+    console.log(id)
     if(confirm("Comfirm Delete")){
-      this.service.deleteFavoriteDrinks(_id).subscribe((res)=>{
+      this.service.deleteFavoriteDrinks(id).subscribe((res)=>{
         this.router.navigateByUrl('/',{skipLocationChange:true})
         .then(()=>{
           this.router.navigate(['/customer']);
